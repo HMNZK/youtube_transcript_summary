@@ -1,10 +1,5 @@
-#!/bin/bash
-
-# スクリプトのディレクトリに移動
-cd "/Users/ryosuke/projects/python/youtube_transcript_summary"
-
-# 仮想環境を有効化
-source venv/bin/activate
-
-# 引数をmain.pyに渡して実行
-python main.py "$@" 
+BASE_DIR="/Users/ryosuke/Projects/youtube_transcript_summary"
+PYTHON_PATH="$BASE_DIR/venv/bin/python"
+SCRIPT_PATH="$BASE_DIR/main.py"
+# スクリプト実行
+"$PYTHON_PATH" "$SCRIPT_PATH" "$@"
