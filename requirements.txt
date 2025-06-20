@@ -1,0 +1,7 @@
+# YouTube字幕取得スクリプトの依存関係
+# 最新のyoutube-transcript-apiライブラリ（1.1.0以上推奨）
+youtube-transcript-api>=1.1.0
+
+# 追加の依存関係（必要に応じて）
+# requests>=2.25.0  # HTTPリクエスト用（プロキシサポート）
+# urllib3>=1.26.0   # URL処理用 
