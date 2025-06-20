@@ -4,10 +4,20 @@ from youtube_transcript_api._errors import (
     TranscriptsDisabled, 
     NoTranscriptFound, 
     VideoUnavailable,
-    RequestBlocked,
-    IpBlocked,
     YouTubeRequestFailed
 )
+
+# バージョン互換性のためのエラークラス定義
+try:
+    from youtube_transcript_api._errors import RequestBlocked, IpBlocked
+except ImportError:
+    # 古いバージョンでは存在しないエラークラス
+    class RequestBlocked(Exception):
+        pass
+    
+    class IpBlocked(Exception):
+        pass
+
 import subprocess
 import re
 import sys
